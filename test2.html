@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function createSelect() {
+				var element = document.createElement("select"); //创建select菜单
+				for(var i = 0; i < 10; i++) {
+					var op = new Option("新增的选项" + i, i);
+					element.options[i] = op;
+				}
+				element.id = "city";
+				element.size = 5;
+				document.getElementById("test").appendChild(element);
+			}
+			function delOne(){
+				var city = document.getElementById("city");
+				if(city.options.length>0){
+					//city.remove(city.options.length-1); //通过remove索引删除
+					city.options[city.options.length-1]=null; //通过令option的最后一个等于空达到删除的目的
+				}
+			}
+			function clearAll(){
+				var city = document.getElementById("city");
+				if(city.options.length>0){
+					city.options.length=0; //令数组长度等于零，清空数组
+				}
+			}
+		</script>
+	</head>
+
+	<body id="test">
+		<input type="button" value="创建一个城市列表框" onclick="createSelect()" />
+		<input type="button" value="一条条删除列表框内容" onclick="delOne()" />
+		<input type="button" value="一次性清除列表框内容" onclick="clearAll()" />
+	</body>
+
+</html>

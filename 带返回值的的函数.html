@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="vl"></p>
+		<script>
+//			function demo(){
+//				return "hello";
+//			}
+//			var vl1 = demo()+":world";
+//			alert(vl1);
+//			var vl2 = demo()+":Yancy";
+//			alert(vl2);
+			function demo(a,b){
+				if(a>b){
+					return "a比较大";
+				}else{
+					return "b比较大";
+				}
+			}
+//			var vl1=demo(10,20);
+//			var vl2=demo(20,10);
+//			alert(vl1);
+//			alert(vl2);
+			document.getElementById("vl").innerHTML=demo(10,20);
+		</script>
+	</body>
+</html>

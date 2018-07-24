@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function show(sText){
+				var oDiv = document.getElementById("display");
+				oDiv.innerHTML+=sText;
+			}
+			window.onload=function(){
+				var mybody = document.getElementById("mbody");
+				var mydiv = document.getElementById("mdiv");
+				var myp = document.getElementById("mp");
+				//为false时冒泡型事件(由内而外)，为true时捕获型事件（由外而内）
+				mybody.addEventListener("click",function() {show('body<br/>')},true);
+				mydiv.addEventListener("click",function() {show('div<br/>')},true);
+				myp.addEventListener("click",function() {show('p<br/>')},true);
+			}
+		</script>
+	</head>
+
+	<body id="mbody">
+		<div id="mdiv">
+			<p id="mp">click me</p>
+		</div>
+		<div id="display">
+
+		</div>
+	</body>
+
+</html>

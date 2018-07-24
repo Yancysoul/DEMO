@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				width: 200px;
+				margin: 0 auto;
+			}
+			li{
+				display: block;
+				width: 30px;
+				height: 30px;
+				background-color: pink;
+				margin: 10px;
+				position: relative;
+			}
+			.div1 ul div{
+				height: 100%;
+				width: 0px;
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				transition: all .5s;
+			}
+			.div1 ul li:hover{
+				background-color: purple;
+			}
+			.div1 ul li:hover div{
+				background-color: purple;
+				width: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<ul>
+				<li><div></div></li>
+				<li><div></div></li>
+				<li><div></div></li>
+				<li><div></div></li>
+				<li><div></div></li>
+				<li><div></div></li>
+			</ul>
+		</div>
+	</body>
+</html>
